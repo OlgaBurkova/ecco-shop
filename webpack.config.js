@@ -40,26 +40,7 @@ module.exports = {
   },
   mode,
   devServer: {
-    proxy: {
-      '/geo-review/list': {
-        target: 'http://localhost:8080',
-        pathRewrite: {
-          '^/geo-review': ''
-        }
-      },
-      '/geo-review/add': {
-        target: 'http://localhost:8080',
-        pathRewrite: {
-          '^/geo-review': ''
-        }
-      },
-      '/geo-review/coords': {
-        target: 'http://localhost:8080',
-        pathRewrite: {
-          '^/geo-review': ''
-        }
-      }
-    }
+    proxy,
   },
   devtool: 'eval-source-map',
   module: {

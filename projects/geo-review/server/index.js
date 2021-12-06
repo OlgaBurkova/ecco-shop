@@ -1,7 +1,5 @@
+const http = require('http');
 const Storage = require('./storage');
-const http = require("http");
-const host = 'localhost';
-const port = 8080;
 
 createServer();
 
@@ -51,7 +49,5 @@ function createServer() {
         end(res, { error: { message: e.message } }, 500);
       }
     })
-    .listen(port, host, () => {
-        console.log(`Server is running on http://${host}:${port}`);
-    });
+    .listen(8181);
 }
